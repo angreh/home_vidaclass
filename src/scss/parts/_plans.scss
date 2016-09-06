@@ -1,0 +1,20 @@
+/* src/scss/parts/_plans.scss */
+.planos-base
+{
+	width: 48%;
+}
+
+.planos
+{
+	.saude
+	{
+		@extend .planos-base;
+		float: left;
+	}
+
+	.farma
+	{
+		@extend .planos-base;
+		float: right;
+	}
+}

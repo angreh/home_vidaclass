@@ -1,0 +1,28 @@
+/* src/scss/parts/_header.scss */
+
+#header {
+
+	height: 50px;
+
+	.logo
+	{
+		position: absolute;
+		top: 2px;
+		left: 0;
+		background: url("/img/header_logo.png") no-repeat;
+		width: 178px;
+		height: 37px;
+	}
+
+	.menu 
+	{
+		position: absolute;
+		top: 2px;
+		right: 0; 
+
+		li, button, ul
+		{
+			display: inline-block;
+		}
+	}
+}

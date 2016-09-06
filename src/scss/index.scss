@@ -1,0 +1,26 @@
+/* src/scss/index.scss */
+
+/* Resets */
+@import "plugins/normalize";
+
+/* General Definitions */
+@import "parts/general";
+
+/* Style for each part */
+/* Header */
+@import "parts/login";
+@import "parts/header";
+/* Home */
+@import "parts/plans";
+@import "parts/banner";
+@import "parts/meter";
+/* Sobre */
+@import "parts/hidden/sobre";
+/* Contato */
+@import "parts/hidden/maps";
+@import "parts/hidden/form";
+@import "parts/hidden/others";
+/* Dúvidas */
+@import "parts/hidden/duvidas";
+/* Footer */
+@import "parts/footer";
