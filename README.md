@@ -1,1 +1,1 @@
-# home_vidaclass
+# VidaClass (Home)
