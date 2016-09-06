@@ -359,20 +359,23 @@ th {
 
 /* General Definitions */
 /* src/scss/parts/_general.scss */
+/* Variables */
+/* Mixins */
+/* Helpers */
 .container {
   width: 800px;
   position: relative;
   margin: 0 auto; }
 
-ul {
-  padding: 0;
-  margin: 0;
-  list-style: none; }
-
 .clearfix:after {
   content: "";
   display: table;
   clear: both; }
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
 
 .hidden-content, .login, .sobre, .contato, .duvidas {
   display: none; }
