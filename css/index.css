@@ -8,6 +8,7 @@
  * 2. Prevent iOS and IE text size adjust after device orientation change,
  *    without disabling user zoom.
  */
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i';
 html {
   font-family: sans-serif;
   /* 1 */
@@ -359,6 +360,10 @@ th {
 
 /* General Definitions */
 /* src/scss/parts/_general.scss */
+* {
+  font-weight: 300;
+  font-size: 14px; }
+
 /* Variables */
 /* Mixins */
 /* Helpers */
@@ -385,31 +390,59 @@ ul {
 /* src/scss/parts/_login.scss */
 /* src/scss/parts/_header.scss */
 #header {
-  height: 50px; }
+  height: 84px;
+  border-bottom: 1px solid #2098c5; }
   #header .logo {
     position: absolute;
-    top: 2px;
+    top: 25px;
     left: 0;
     background: url("/img/header_logo.png") no-repeat;
     width: 178px;
     height: 37px; }
   #header .menu {
     position: absolute;
-    top: 2px;
-    right: 0; }
+    top: 32px;
+    right: 0;
+    font-size: 12px; }
+    #header .menu button {
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      border-radius: 5px;
+      border: none;
+      background: #000000;
+      color: white;
+      padding: 7px 22px 9px 22px; }
     #header .menu li, #header .menu button, #header .menu ul {
-      display: inline-block; }
+      color: #2098c5;
+      display: inline-block;
+      margin: 0 10px;
+      text-transform: uppercase;
+      font-weight: 400; }
+    #header .menu button {
+      font-size: 15px;
+      color: white;
+      margin: 0 0 0 6px;
+      text-transform: lowercase;
+      background-color: #2098c5;
+      font-weight: 300; }
+    #header .menu button.gray {
+      background-color: #a9a9a9; }
 
 /* Home */
 /* src/scss/parts/_plans.scss */
 .planos-base, .planos .saude, .planos .farma {
   width: 48%; }
 
-.planos .saude {
-  float: left; }
-
-.planos .farma {
-  float: right; }
+.planos {
+  background: url("/img/banner_bg.jpg") no-repeat;
+  background-position: center;
+  height: 638px; }
+  .planos .saude {
+    float: left; }
+  .planos .farma {
+    float: right;
+    text-align: right; }
 
 /* src/scss/parts/_banner.scss */
 /* src/scss/parts/_meter.scss */

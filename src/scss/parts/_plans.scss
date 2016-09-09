@@ -6,6 +6,10 @@
 
 .planos
 {
+	@include single-background('/img/banner_bg.jpg');
+	background-position: center; 
+	height: 638px;
+	
 	.saude
 	{
 		@extend .planos-base;
@@ -16,5 +20,6 @@
 	{
 		@extend .planos-base;
 		float: right;
+		text-align: right;
 	}
 }
