@@ -3,4 +3,9 @@
 .sobre
 {
 	@extend .hidden-content;
+
+	p
+	{
+		@extend .p-general;
+	}
 }

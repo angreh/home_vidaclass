@@ -2,10 +2,11 @@
 <html>
 <head>
 	<!-- src/html/beforeBody.html -->
-	
+
 	<meta charset="utf-8">
 	<title>Vida Class</title>
 
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
@@ -25,14 +26,16 @@
 <!-- Begin : Header -->
 <div id="header">
 	<div class="container">
-		
-		<div class="logo"></div>
+
+		<a href="http://vidaclass.com.br/" class="logo"></a>
 
 		<div class="menu">
 			<ul>
-				<li>sobre</li>
-				<li>contato</li>
-				<li>dúvidas</li>
+				<li><a href="#saude">saude</a></li>
+				<li><a href="#farma">farma</a></li>
+				<li><a href="#sobre">sobre</a></li>
+				<li><a href="#contato">contato</a></li>
+				<li><a href="#duvidas">dúvidas</a></li>
 			</ul>
 			<button>prestador</button>
 			<button class="gray">entrar</button>
@@ -46,7 +49,7 @@
 <!-- Begin : Content -->
 <div id="content">
 <!-- Begin : Home -->
-<div class="home">
+<div class="home switcher">
 
 	<!-- Begin : Planos -->
 	<div class="planos">
@@ -130,35 +133,94 @@
 <!-- End : Home -->
 <!-- src/html/content/sobre/sobre.html -->
 
-<div class="sobre">
+<div class="sobre switcher">
 	<div class="container">
-		Sobre
+
+		<h1>Sobre</h1>
+
+		<p>
+	        A Vida Class é um novo jeito de cuidar da sua saúde: você só paga quando usa. Não tem taxas de adesão ou manutenção e oferece a maior cobertura nacional em termos de conveniência e preço.
+	        <br>
+	        <br>
+	        Clínicas e profissionais de saúde das mais diversas especialidades oferecem preços diferenciados e a possibilidade de parcelamento de consultas, tratamentos odontológicos, exames e procedimentos ambulatoriais, entre outros, em até 12 vezes.
+	        <br>
+	        <br>
+	        Juntamente com o Vida Class Saúde a companhia disponibiliza o Vida Class Farma que disponibiliza uma rede de mais de 22 mil farmácias em 1500 municípios, com cobertura nacional e medicamentos com até 60% de desconto; o cliente tem a opção de escolher entre acumular pontos na rede de fidelidade Multiplus ou em bônus no valor de R$ 8,00 para um celular, das maiores operadoras, a ser indicado pelo beneficiário. Para se cadastrar no Vida Class Farma é necessário pagar uma mensalidade de R$ 7,99.
+        </p>
 	</div>
 </div>
 <!-- src/html/content/contato/maps.html -->
 
 <!-- Begin : Contato -->
-<div class="contato">
+<div class="contato switcher">
 
 	<!-- Begin : Maps -->
-	<div class="maps">Maps</div>
+	<div class="maps">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14627.775961588259!2d-46.655457!3d-23.570455!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c15acd8285%3A0xbaa031c872b8db1e!2sR.+Jos%C3%A9+Maria+Lisboa%2C+265+-+Jardim+Paulista%2C+S%C3%A3o+Paulo+-+SP%2C+Brazil!5e0!3m2!1sen!2sbr!4v1473681749200" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+	</div>
 	<!-- End : Maps -->
 <!-- src/html/content/contato/form.html -->
 
 <!-- Begin : wrapper-form-others -->
-<div class="wrapper-form-others container">
+<div class="wrapper-form-others container clearfix">
 
 	<!-- Begin : form -->
 	<div class="form">
-		Form
+
+		<h2>Fale Conosco</h2>
+
+		<p>
+			Seu contato é muito importante para o Vida Class. <br>
+			Preencha os dados solicitados abaixo para enviar sua mensagem.
+		</p>
+
+		<form>
+
+		<div class="input-field">
+			<input type="text" name="name">
+		</div>
+
+		<div class="input-field">
+			<input type="email" name="mail">
+		</div>
+
+		<div class="input-field">
+			<input type="tel" name="phone">
+		</div>
+
+		<div class="input-field">
+			<h3>Mensagem</h3>
+			<textarea name="message" maxlength="250"></textarea>
+		</div>
+
+		<button type="submit">ENVIAR</button>
+
+		</form>
 	</div>
 	<!-- End : form -->
 
-<!-- src/html/content/contato/form.html -->
-
 		<!-- Begin : Others -->
 		<div class="others">
-			Others
+
+			<h2>Informações para contato</h2>
+
+			<h3>Endereço</h3>
+
+			Rua José Maria Lisboa, 265 <br>
+			Jardins, São Paulo - SP <br>
+			01423-001 <br>
+			<br>
+			<br>
+
+			<h3>Outros meios</h3>
+
+			<div class="item telephone">(11) 2627 5200</div>
+			<div class="item telephone">0800 202 5277</div>
+			<div class="item chat">(11) 9 5089 4184</div>
+			<div class="item email">contato@vidaclass.com.br</div>
+			<div class="item facebook">Vida Class</div>
+			<div class="item twitter">@vidaclass</div>
+
 		</div>
 		<!-- End : Others -->
 
@@ -170,7 +232,7 @@
 <!-- src/html/content/duvidas/duvidas.html -->
 
 <!-- Begin : duvidas -->
-<div class="duvidas">
+<div class="duvidas switcher">
 	<div class="container">
 		Dúividas
 	</div>
@@ -186,40 +248,55 @@
 <!-- Begin : Footer -->
 <div id="footer">
 	<div class="container">
-		
+
 		<div class="logo"></div>
 
-		<div class="payment-form">Pagamentos</div>
+		<div class="payment-form">
+			<div class="text">
+				Formas de pagamento:
+			</div>
+		</div>
 
-		<div class="wrapper-prest-stickers">
-			
-			<div class="prest">Prestador</div>
+		<div class="wrapper-social-stickers">
 
-			<div class="stickers">Prestador</div>
+			<div class="social">
+				<a href="#" class="instagram"></a>
+				<a href="#" class="facebook"></a>
+				<a href="#" class="telephone"></a>
+			</div>
+
+			<div class="stickers">
+				<div class="img"></div>
+			</div>
 
 		</div>
 
 		<div class="wrapper-menu">
-			
+
 			<div class="menu">
 				<ul>
 					<li>Sobre</li>
-					<li>Contato</li>
 					<li>Dúvidas</li>
+					<li>
+						Contato
+
+						<div class="telephones">
+							0800 202 5277<br>
+							(11) 2627 5210
+						</div>
+					</li>
 				</ul>
 			</div>
+		</div>
 
-			<div class="contact">Contato</div>
-
-		</div>	
-
-		<div class="copyright">CopyRight</div>
+		<div class="copyright">
+			© Vida Class 2016 - Todos os direitos reservados / CNPJ: 18.351.664/0001-60
+		</div>
 
 	</div>
 </div>
 <!-- End : Footer -->
-<!-- src/html/scripts.html -->
-
+<script type="text/javascript" src="./js/index.js"></script>
 <script>
 	document.write(
 		'<script src="http://' + 

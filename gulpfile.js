@@ -16,6 +16,7 @@ gulp.task( 'scripts', function()
 {
 	gulp.src([
 		'src/js/jquery-3.1.0.min.js',
+		'src/js/jquery.ba-hashchange.min.js',
 		'src/js/index.js'
 		])
 	.pipe( concat( 'index.js' ) )

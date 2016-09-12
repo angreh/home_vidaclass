@@ -1,1 +1,69 @@
-/* src/scss/parts/hidden/_form.scss */
+.contato
+{
+	p
+	{
+		color: $color-gray;
+	}
+
+	.form
+	{
+		float: left;
+		width: 49%;
+		padding-bottom: 50px;
+
+		input, textarea
+		{
+			width: 250px;
+			padding: 8px 15px 8px 37px;
+			margin-bottom: 10px;
+			border: 1px solid $color-gray;
+			color: $color-gray;
+			outline: none;
+		}
+
+		input:hover, textarea:hover,
+		input:focus, textarea:focus
+		{
+			border-color: #000;
+		}
+
+		input[name='name']
+		{
+			@include single-background('../img/form_account.png');
+			background-position: 10px 6px;
+		}
+
+		input[name='mail']
+		{
+			@include single-background('../img/form_mail.png');
+			background-position: 10px 6px;
+		}
+
+		input[name='phone']
+		{
+			@include single-background('../img/form_phone.png');
+			background-position: 10px 6px;
+		}
+
+		textarea[name='message']
+		{
+			@include single-background('../img/form_message.png');
+			background-position: 10px 6px;
+		}
+
+		button
+		{
+			padding: 11px 0 9px;
+			border: none;
+			width: 100px;
+			@include border-radius(5px);
+			background-color: $color-blue;
+			color: $color-white;
+		}
+
+		button:hover
+		{
+			font-weight: 800;
+		}
+	}
+}
