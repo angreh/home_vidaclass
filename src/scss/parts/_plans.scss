@@ -1,19 +1,55 @@
-/* src/scss/parts/_plans.scss */
+/* Plans */
 .planos-base
 {
 	width: 48%;
 }
 
+.planos-logo
+{
+	height: 119px;
+	display: inline-block;
+	margin: 55px 0 40px;
+}
+
 .planos
 {
-	@include single-background('/img/banner_bg.jpg');
-	background-position: center; 
+	@include single-background('../img/banner_bg.jpg');
+	background-position: center;
 	height: 638px;
-	
+	color: $color-gray;
+
 	.saude
 	{
 		@extend .planos-base;
 		float: left;
+
+		.logo
+		{
+			@extend .planos-logo;
+			@include single-background('../img/plans_logoSaude.png');
+			width: 202px;
+		}
+
+		.color, strong
+		{
+			color: $color-green;
+		}
+
+		button
+		{
+			background-color: $color-green;
+		}
+
+		li
+		{
+			padding-left: 20px;
+		}
+
+		li:before
+		{
+			left: 0;
+			background-color: $color-green;
+		}
 	}
 
 	.farma
@@ -21,5 +57,86 @@
 		@extend .planos-base;
 		float: right;
 		text-align: right;
+
+		.logo
+		{
+			@extend .planos-logo;
+			@include single-background('../img/plans_logoFarma.png');
+			width: 195px;
+		}
+
+		.color, strong
+		{
+			color: $color-red;
+		}
+
+		button
+		{
+			background-color: $color-red;
+		}
+
+		li
+		{
+			padding-right: 20px;
+		}
+
+		li:before
+		{
+			right: 0;
+			background-color: $color-red;
+		}
+	}
+
+	.text, li
+	{
+		font-size: 1.35em;
+	}
+
+	strong, .color
+	{
+		font-size: 1em;
+	}
+
+	.text
+	{
+		display: block;
+		height: 100px;
+	}
+
+	a
+	{
+		text-decoration: none;
+	}
+
+	ul
+	{
+		height: 130px;
+	}
+
+	li
+	{
+		margin-bottom: 10px;
+		position: relative;
+	}
+
+	li:before
+	{
+		content: ' ';
+		position: absolute;
+		display: block;
+		width: 12px;
+		height: 2px;
+		top: 10px;
+	}
+
+	button
+	{
+		margin-top: 30px;
+		border: none;
+		width: 260px;
+		height: 40px;
+		@include border-radius(5px);
+		text-transform: uppercase;
+		color: $color-white;
 	}
 }

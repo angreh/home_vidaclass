@@ -358,17 +358,17 @@ td,
 th {
   padding: 0; }
 
-/* General Definitions */
-/* src/scss/parts/_general.scss */
+/* General */
 * {
   font-weight: 300;
   font-size: 14px; }
 
 /* Variables */
+/* Cores */
 /* Mixins */
 /* Helpers */
 .container {
-  width: 800px;
+  width: 981px;
   position: relative;
   margin: 0 auto; }
 
@@ -396,7 +396,7 @@ ul {
     position: absolute;
     top: 25px;
     left: 0;
-    background: url("/img/header_logo.png") no-repeat;
+    background: url("../img/header_logo.png") no-repeat;
     width: 178px;
     height: 37px; }
   #header .menu {
@@ -430,22 +430,93 @@ ul {
       background-color: #a9a9a9; }
 
 /* Home */
-/* src/scss/parts/_plans.scss */
+/* Plans */
 .planos-base, .planos .saude, .planos .farma {
   width: 48%; }
 
+.planos-logo, .planos .saude .logo, .planos .farma .logo {
+  height: 119px;
+  display: inline-block;
+  margin: 55px 0 40px; }
+
 .planos {
-  background: url("/img/banner_bg.jpg") no-repeat;
+  background: url("../img/banner_bg.jpg") no-repeat;
   background-position: center;
-  height: 638px; }
+  height: 638px;
+  color: #8a8a8a; }
   .planos .saude {
     float: left; }
+    .planos .saude .logo {
+      background: url("../img/plans_logoSaude.png") no-repeat;
+      width: 202px; }
+    .planos .saude .color, .planos .saude strong {
+      color: #85B6A3; }
+    .planos .saude button {
+      background-color: #85B6A3; }
+    .planos .saude li {
+      padding-left: 20px; }
+    .planos .saude li:before {
+      left: 0;
+      background-color: #85B6A3; }
   .planos .farma {
     float: right;
     text-align: right; }
+    .planos .farma .logo {
+      background: url("../img/plans_logoFarma.png") no-repeat;
+      width: 195px; }
+    .planos .farma .color, .planos .farma strong {
+      color: #CD725D; }
+    .planos .farma button {
+      background-color: #CD725D; }
+    .planos .farma li {
+      padding-right: 20px; }
+    .planos .farma li:before {
+      right: 0;
+      background-color: #CD725D; }
+  .planos .text, .planos li {
+    font-size: 1.35em; }
+  .planos strong, .planos .color {
+    font-size: 1em; }
+  .planos .text {
+    display: block;
+    height: 100px; }
+  .planos a {
+    text-decoration: none; }
+  .planos ul {
+    height: 130px; }
+  .planos li {
+    margin-bottom: 10px;
+    position: relative; }
+  .planos li:before {
+    content: ' ';
+    position: absolute;
+    display: block;
+    width: 12px;
+    height: 2px;
+    top: 10px; }
+  .planos button {
+    margin-top: 30px;
+    border: none;
+    width: 260px;
+    height: 40px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: #FFFFFF; }
 
 /* src/scss/parts/_banner.scss */
-/* src/scss/parts/_meter.scss */
+.banner .slider {
+  margin: 30px 0; }
+
+.meter .container {
+  text-align: center;
+  font-size: 1.4em;
+  color: #8a8a8a;
+  font-weight: 200;
+  padding-bottom: 30px; }
+
 /* Sobre */
 /* src/scss/parts/hidden/_sobre.scss */
 /* Contato */

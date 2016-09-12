@@ -1,1 +1,11 @@
-/* src/scss/parts/_meter.scss */
+.meter
+{
+	.container
+	{
+		text-align: center;
+		font-size: 1.4em;
+		color: $color-gray;
+		font-weight: 200;
+		padding-bottom: 30px;
+	}
+}

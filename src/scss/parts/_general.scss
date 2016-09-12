@@ -1,6 +1,5 @@
-/* src/scss/parts/_general.scss */
-
 @import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i';
+
 *
 {
 	font-weight: 300;
@@ -8,8 +7,13 @@
 }
 
 /* Variables */
-$max-width : 800px;
-$azul: #2098c5;
+$max-width : 981px;
+/* Cores */
+$color-blue: #2098c5;
+$color-gray: #8a8a8a;
+$color-green: #85B6A3;
+$color-red: #CD725D;
+$color-white: #FFFFFF;
 
 /* Mixins */
 @mixin single-background($url)
@@ -17,7 +21,7 @@ $azul: #2098c5;
 	background: url($url) no-repeat;
 }
 
-@mixin border-radius($radius) 
+@mixin border-radius($radius)
 {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
@@ -39,7 +43,7 @@ $azul: #2098c5;
   clear: both;
 }
 
-ul 
+ul
 {
 	padding: 0;
 	margin: 0;

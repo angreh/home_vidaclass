@@ -3,19 +3,19 @@
 #header {
 
 	height: 84px;
-	border-bottom: 1px solid $azul;
+	border-bottom: 1px solid $color-blue;
 
 	.logo
 	{
 		position: absolute;
 		top: 25px;
 		left: 0;
-		@include single-background("/img/header_logo.png");
+		@include single-background("../img/header_logo.png");
 		width: 178px;
 		height: 37px;
 	}
 
-	.menu 
+	.menu
 	{
 		position: absolute;
 		top: 32px;
@@ -33,7 +33,7 @@
 
 		li, button, ul
 		{
-			color: $azul;
+			color: $color-blue;
 			display: inline-block;
 			margin: 0 10px;
 			text-transform: uppercase;
@@ -46,7 +46,7 @@
 			color: white;
 			margin: 0 0 0 6px;
 			text-transform: lowercase;
-			background-color: $azul;
+			background-color: $color-blue;
 			font-weight: 300;
 		}
 
