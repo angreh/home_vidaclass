@@ -1,0 +1,69 @@
+<!-- Begin : Login -->
+<div class="login switcher">
+	<div class="container">
+
+		<h1>Entrar</h1>
+
+		<div class="login-content">
+
+			<p class="label-face">
+				Entrar com o facebook: &nbsp;
+			</p>
+
+			<div
+				id="facebookLogin"
+				class="fb-login-button end fb_iframe_widget"
+				onlogin="checkLoginState();"
+				data-max-rows="1"
+				data-size="large"
+				data-show-faces="false"
+				data-auto-logout-link="false"
+				login_text=""
+				fb-xfbml-state="rendered"
+				fb-iframe-plugin-query="app_id=905478576202374&amp;auto_logout_link=false&amp;container_width=0&amp;locale=pt_BR&amp;max_rows=1&amp;sdk=joey&amp;show_faces=false&amp;size=large">
+
+				<span style="vertical-align: bottom; width: 74px; height: 25px;">
+					<iframe
+						name="f34b22bad20d654"
+						width="1000px"
+						height="1000px"
+						frameborder="0"
+						allowtransparency="true"
+						allowfullscreen="true"
+						scrolling="no"
+						title="fb:login_button Facebook Social Plugin"
+						src="https://www.facebook.com/v2.5/plugins/login_button.php?app_id=905478576202374&amp;auto_logout_link=false&amp;channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FlUqP5iIjiw6.js%3Fversion%3D42%23cb%3Df2a422700414a3%26domain%3Dwww.vidaclass.com.br%26origin%3Dhttp%253A%252F%252Fwww.vidaclass.com.br%252Ff26ac5636784094%26relation%3Dparent.parent&amp;container_width=0&amp;locale=pt_BR&amp;max_rows=1&amp;sdk=joey&amp;show_faces=false&amp;size=large"
+						style="border: none; visibility: visible; width: 74px; height: 25px;"
+						class="">
+					</iframe>
+				</span>
+			</div>
+
+			<p class="separator"><span>ou</span></p>
+
+			<form
+				name="frmEntrar"
+				action="https://www.vidaclass.com.br/login"
+				id="frmEntrar"
+				method="POST"
+				novalidate="novalidate">
+
+	            <div class="input-login">
+	                <label for="login">Email ou CPF</label>
+	                <input name="login" id="UserLogin" type="text">
+	            </div>
+
+	            <div class="input-login">
+	                <label for="password">Senha</label>
+	                <input name="password" id="UserPassword" type="password">
+	            </div>
+
+	            <input name="btn-login" id="btn-login" type="submit" value="ENTRAR" class="btnv2 btnv2-small btnv2-default">
+	        </form>
+
+		</div><!-- .login-content -->
+
+
+	</div><!-- .container -->
+</div>
+<!-- End : Login -->

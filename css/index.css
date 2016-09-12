@@ -358,6 +358,9 @@ td,
 th {
   padding: 0; }
 
+* {
+  outline: none; }
+
 /* General */
 * {
   font-weight: 300;
@@ -382,7 +385,7 @@ ul {
   margin: 0;
   list-style: none; }
 
-.hidden-content, .login, .sobre, .contato, .duvidas {
+.hidden-content, .sobre, .contato, .duvidas, .login {
   display: none; }
 
 .p-general, .sobre p {
@@ -397,7 +400,7 @@ h1 {
   position: relative;
   font-size: 2em;
   display: block;
-  margin-bottom: 50px; }
+  margin: 50px 0; }
 
 h1:after {
   content: '';
@@ -416,7 +419,6 @@ h3 {
 
 /* Style for each part */
 /* Header */
-/* src/scss/parts/_login.scss */
 /* src/scss/parts/_header.scss */
 #header {
   height: 84px;
@@ -563,6 +565,9 @@ h3 {
 
 /* Sobre */
 /* src/scss/parts/hidden/_sobre.scss */
+.sobre {
+  padding-bottom: 50px; }
+
 /* Contato */
 .contato .maps iframe {
   pointer-events: none; }
@@ -612,9 +617,92 @@ h3 {
 .contato .others {
   float: right;
   width: 49%; }
+  .contato .others .item {
+    color: #8a8a8a;
+    margin-bottom: 15px;
+    padding-left: 28px;
+    height: 20px; }
+  .contato .others .item.telephone {
+    background: url("../img/form_phone.png") no-repeat; }
+  .contato .others .item.chat {
+    background: url("../img/others_whats.png") no-repeat; }
+  .contato .others .item.email {
+    background: url("../img/form_mail.png") no-repeat; }
+  .contato .others .item.facebook {
+    background: url("../img/others_facebook.png") no-repeat; }
+  .contato .others .item.twitter {
+    background: url("../img/others_twitter.png") no-repeat; }
 
 /* Dúvidas */
-/* src/scss/parts/hidden/_duvidas.scss */
+.duvidas {
+  padding-bottom: 50px; }
+  .duvidas p {
+    color: #8a8a8a;
+    margin-bottom: 30px; }
+  .duvidas .questions .activity-item-detail {
+    display: none;
+    padding-bottom: 20px; }
+  .duvidas .questions h5 {
+    display: inline-block;
+    font-weight: 800;
+    margin: 5px 0 10px;
+    transition: all 0.5s;
+    color: #2098c5;
+    cursor: pointer; }
+  .duvidas .questions .activity-item-detail {
+    color: #8a8a8a; }
+  .duvidas .questions .activity-item.active h5 {
+    color: #000; }
+
+/* Login */
+.login {
+  padding-bottom: 50px; }
+  .login .login-content {
+    text-align: center; }
+  .login p.separator {
+    color: #8a8a8a;
+    margin-bottom: 30px; }
+    .login p.separator span {
+      z-index: 10;
+      background-color: #FFFFFF;
+      position: relative;
+      padding: 0 5px;
+      display: inline-block; }
+  .login p.separator:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #f1f1f1;
+    margin-top: -7px;
+    position: relative;
+    z-index: 5; }
+  .login .fb-login-button, .login p.label-face {
+    display: inline-block;
+    vertical-align: middle;
+    color: #000000; }
+  .login form {
+    width: 280px;
+    display: inline-block;
+    text-align: left; }
+    .login form label {
+      display: block;
+      margin-bottom: 5px; }
+    .login form input {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 20px;
+      color: #8a8a8a; }
+    .login form #btn-login {
+      border: none;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      border-radius: 5px;
+      background-color: #2098c5;
+      color: #FFFFFF; }
+
 /* Footer */
 /* src/scss/parts/_footer.scss */
 #footer {
@@ -681,16 +769,17 @@ h3 {
     left: 400px; }
     #footer .wrapper-menu li {
       float: left;
-      margin-right: 30px;
+      margin-right: 35px;
       position: relative;
-      color: #2098c5; }
+      color: #2098c5;
+      font-size: 1.3em; }
       #footer .wrapper-menu li .telephones {
         margin-top: 15px;
-        font-size: 0.95em; }
+        font-size: 0.85em; }
     #footer .wrapper-menu li:last-child {
       margin-right: 0; }
     #footer .wrapper-menu li:after {
-      top: 20px; }
+      top: 22px; }
   #footer .copyright {
     position: absolute;
     top: 250px;

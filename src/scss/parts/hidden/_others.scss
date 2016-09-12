@@ -4,5 +4,38 @@
 	{
 		float: right;
 		width: 49%;
+
+		.item
+		{
+			color: $color-gray;
+			margin-bottom: 15px;
+			padding-left: 28px;
+			height: 20px;
+		}
+
+		.item.telephone
+		{
+			@include single-background('../img/form_phone.png');
+		}
+
+		.item.chat
+		{
+			@include single-background('../img/others_whats.png');
+		}
+
+		.item.email
+		{
+			@include single-background('../img/form_mail.png');
+		}
+
+		.item.facebook
+		{
+			@include single-background('../img/others_facebook.png');
+		}
+
+		.item.twitter
+		{
+			@include single-background('../img/others_twitter.png');
+		}
 	}
 }

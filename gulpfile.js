@@ -44,6 +44,8 @@ gulp.task( 'html', function()
 
 		'src/html/content/duvidas/duvidas.html',
 
+		'src/html/content/login/login.html',
+
 		'src/html/content/after.html',
 		'src/html/footer.html',
 		'src/html/scripts.html',

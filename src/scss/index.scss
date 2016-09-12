@@ -8,7 +8,6 @@
 
 /* Style for each part */
 /* Header */
-@import "parts/login";
 @import "parts/header";
 /* Home */
 @import "parts/plans";
@@ -22,5 +21,7 @@
 @import "parts/hidden/others";
 /* Dúvidas */
 @import "parts/hidden/duvidas";
+/* Login */
+@import "parts/hidden/login";
 /* Footer */
 @import "parts/footer";

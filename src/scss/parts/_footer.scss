@@ -115,14 +115,15 @@
 		li
 		{
 			float: left;
-			margin-right: 30px;
+			margin-right: 35px;
 			position: relative;
 			color: $color-blue;
+			font-size: 1.3em;
 
 			.telephones
 			{
 				margin-top: 15px;
-				font-size: 0.95em;
+				font-size: 0.85em;
 			}
 		}
 
@@ -134,7 +135,7 @@
 		li:after
 		{
 			@extend .after-detail;
-			top: 20px;
+			top: 22px;
 		}
 	}
 

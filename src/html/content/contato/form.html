@@ -6,6 +6,7 @@
 	<!-- Begin : form -->
 	<div class="form">
 
+
 		<h2>Fale Conosco</h2>
 
 		<p>
@@ -13,26 +14,33 @@
 			Preencha os dados solicitados abaixo para enviar sua mensagem.
 		</p>
 
-		<form>
+		<form
+			method="post"
+			accept-charset="utf-8"
+			id="contact"
+			action="https://m.vidaclass.com.br/contato"
+			novalidate="novalidate">
 
-		<div class="input-field">
-			<input type="text" name="name">
-		</div>
+			<input type="hidden" name="_method" value="POST">
 
-		<div class="input-field">
-			<input type="email" name="mail">
-		</div>
+			<div class="input-field">
+				<input type="text" name="name" placeholder="Nome">
+			</div>
 
-		<div class="input-field">
-			<input type="tel" name="phone">
-		</div>
+			<div class="input-field">
+				<input type="email" name="mail" placeholder="E-mail">
+			</div>
 
-		<div class="input-field">
-			<h3>Mensagem</h3>
-			<textarea name="message" maxlength="250"></textarea>
-		</div>
+			<div class="input-field">
+				<input type="tel" name="phone" placeholder="Telefone">
+			</div>
 
-		<button type="submit">ENVIAR</button>
+			<div class="input-field">
+				<h3>Mensagem</h3>
+				<textarea name="message" maxlength="250" placeholder="Mensagem"></textarea>
+			</div>
+
+			<button type="submit">ENVIAR</button>
 
 		</form>
 	</div>

@@ -12,15 +12,6 @@
 <body>
 
 
-<!-- src/html/login.html -->
-
-<!-- Begin : Login -->
-<div class="login">
-	<div class="container">
-		Login : Entrar : Face
-	</div>
-</div>
-<!-- End : Login -->
 <!-- src/html/header.html -->
 
 <!-- Begin : Header -->
@@ -31,14 +22,14 @@
 
 		<div class="menu">
 			<ul>
-				<li><a href="#saude">saude</a></li>
-				<li><a href="#farma">farma</a></li>
+				<li><a href="http://vidaclass.com.br/saude">saude</a></li>
+				<li><a href="http://vidaclass.com.br/farma">farma</a></li>
 				<li><a href="#sobre">sobre</a></li>
 				<li><a href="#contato">contato</a></li>
 				<li><a href="#duvidas">dúvidas</a></li>
 			</ul>
-			<button>prestador</button>
-			<button class="gray">entrar</button>
+			<button onclick="window.location.href='http://vidaclass.com.br/prestadores'">prestador</button>
+			<button class="gray" onclick="window.location.hash='#login';">entrar</button>
 		</div>
 
 	</div>
@@ -75,9 +66,13 @@
 					<li>Sem taxa de adesão</li>
 				</ul>
 
-				<a href="#saude" class="color">Saiba mais</a><br>
+				<a href="http://vidaclass.com.br/saude" class="color">Saiba mais</a><br>
 
-				<button>cadastre-se</button>
+				<button
+					 onclick="window.location.href='http://www.vidaclass.com.br/cadastro/saude/';">
+
+					 cadastre-se
+				 </button>
 
 			</div>
 			<!-- End : Saude -->
@@ -101,9 +96,13 @@
 					</li>
 				</ul>
 
-				<a href="#farma" class="color">Saiba mais</a><br>
+				<a href="http://vidaclass.com.br/farma" class="color">Saiba mais</a><br>
 
-				<button>cadastre-se</button>
+				<button
+					onclick="window.location.href='https://www.vidaclass.com.br/cadastro/farma/'">
+
+					cadastre-se
+				</button>
 
 			</div>
 			<!-- End : Farma -->
@@ -167,6 +166,7 @@
 	<!-- Begin : form -->
 	<div class="form">
 
+
 		<h2>Fale Conosco</h2>
 
 		<p>
@@ -174,26 +174,33 @@
 			Preencha os dados solicitados abaixo para enviar sua mensagem.
 		</p>
 
-		<form>
+		<form
+			method="post"
+			accept-charset="utf-8"
+			id="contact"
+			action="https://m.vidaclass.com.br/contato"
+			novalidate="novalidate">
 
-		<div class="input-field">
-			<input type="text" name="name">
-		</div>
+			<input type="hidden" name="_method" value="POST">
 
-		<div class="input-field">
-			<input type="email" name="mail">
-		</div>
+			<div class="input-field">
+				<input type="text" name="name" placeholder="Nome">
+			</div>
 
-		<div class="input-field">
-			<input type="tel" name="phone">
-		</div>
+			<div class="input-field">
+				<input type="email" name="mail" placeholder="E-mail">
+			</div>
 
-		<div class="input-field">
-			<h3>Mensagem</h3>
-			<textarea name="message" maxlength="250"></textarea>
-		</div>
+			<div class="input-field">
+				<input type="tel" name="phone" placeholder="Telefone">
+			</div>
 
-		<button type="submit">ENVIAR</button>
+			<div class="input-field">
+				<h3>Mensagem</h3>
+				<textarea name="message" maxlength="250" placeholder="Mensagem"></textarea>
+			</div>
+
+			<button type="submit">ENVIAR</button>
 
 		</form>
 	</div>
@@ -206,11 +213,11 @@
 
 			<h3>Endereço</h3>
 
-			Rua José Maria Lisboa, 265 <br>
-			Jardins, São Paulo - SP <br>
-			01423-001 <br>
-			<br>
-			<br>
+			<p>
+				Rua José Maria Lisboa, 265 <br>
+				Jardins, São Paulo - SP <br>
+				01423-001
+			</p>
 
 			<h3>Outros meios</h3>
 
@@ -234,11 +241,247 @@
 <!-- Begin : duvidas -->
 <div class="duvidas switcher">
 	<div class="container">
-		Dúividas
-	</div>
+
+	    <h1>Perguntas frequentes</h1>
+
+	    <p>
+	        Caso tenha qualquer outra dúvida, por favor entre em contato.
+	    </p>
+
+		<div class="questions">
+		    <div class="activity-item container">
+		        <h5>O que é o Vida Class Saúde?</h5>
+
+		        <div class="activity-item-detail">
+		            O Vida Class Saúde é um serviço em que clínicas e profissionais de saúde cadastrados oferecem preços diferenciados e a possibilidade de parcelamento de consultas, tratamentos odontológicos, exames e procedimentos ambulatoriais, entre outros, em até 12 vezes.
+		            *Incidência de taxa de juros e IOF. Sujeito à aprovação de crédito, para os pagamentos realizados com o cartão de crédito.
+		        </div>
+		    </div>
+
+		    <div class="activity-item container">
+		        <h5>O Vida Class Saúde é um plano de saúde?</h5>
+
+		        <div class="activity-item-detail">
+		            O Vida Class Saúde não é um plano de saúde, não tem mensalidade ou taxa de adesão, e também não tem carência.
+		        </div>
+		    </div>
+
+		    <div class="activity-item container">
+		        <h5>Como utilizar o Vida Class Saúde?</h5>
+
+		        <div class="activity-item-detail">
+		            Basta escolher a clínica ou profissional cadastrado através do site, entrar em contato agendando o atendimento e se identificar como usuário Vida Class Saúde ou cliente do cartão de crédito. Quando fizer o pagamento com o cartão de crédito, você poderá escolher em quantas parcelas deseja pagar, até o limite de 12 vezes*.
+		        </div>
+		    </div>
+
+		    <div class="activity-item container">
+		        <h5>Eu preciso fazer cadastro no Vida Class Saúde?</h5>
+
+		        <div class="activity-item-detail">
+		            Sim. Para encontrar um prestador, realizar uma busca e conferir os valores é preciso realizar o cadastro. Ainda, ao fazer o cadastro no site você terá a vantagem de receber novidades sobre saúde, novos prestadores cadastrados e outros benefícios. Para utilizar o Vida Class Saúde, basta utilizar o seu cartão de crédito no site do Vida Class Saúde.
+		        </div>
+		    </div>
+
+		    <div class="activity-item container">
+		        <h5>Quais são os procedimentos que posso realizar com o Vida Class Saúde?</h5>
+
+		        <div class="activity-item-detail">
+		            Somente procedimentos ambulatoriais, como consultas médicas, tratamentos odontológicos, fisioterapia, psicologia, nutrição, fonoaudiólogos, dermatologia estética e outros. Você também pode usufruir de vacinas e exames ambulatoriais como análises clínicas, ultrassonografia, mamografia, tomografia, ressonância magnética, entre outros.
+		        </div>
+		    </div>
+
+		    <div class="activity-item container">
+		        <h5>Posso fazer uma cirurgia usando o Vida Class Saúde?</h5>
+
+		        <div class="activity-item-detail">
+		            Somente pequenas cirurgias ambulatoriais, ou seja, que não necessitam de internação ou de anestesias com sedação.
+		        </div>
+		    </div>
+
+		    <div class="activity-item container">
+		        <h5>Como faço para saber os valores dos serviços prestados?</h5>
+
+		        <div class="activity-item-detail">
+		            Consulte o site.
+		        </div>
+		    </div>
+
+		    <div class="activity-item container">
+		        <h5>Como posso calcular o valor das parcelas?</h5>
+
+		        <div class="activity-item-detail">
+		            Para calcular o valor aproximado das parcelas, clique aqui e utilize o simulador. Você deve preencher o simulador com as seguintes informações:
+		            <br>
+		            - Valor do procedimento
+		            <br>
+		            - Número de parcelas
+		        </div>
+		    </div>
+
+		    <div class="activity-item container">
+		        <h5>Posso parcelar qualquer valor?</h5>
+
+		        <div class="activity-item-detail">
+		            O Vida Class Farma é um produto que possibilita aos clientes portadores de cartão de crédito, acesso a mais de 2 mil medicamentos com descontos de até 60% em mais de 19 mil farmácias em todo Brasil.
+		        </div>
+		    </div>
+
+		    <div class="activity-item container">
+		        <h5>O que é o Vida Class Orienta?</h5>
+
+		        <div class="activity-item-detail">
+		            Para usar o Vida Class solicite um cartão de crédito CAIXA. Caso não seja correntista do banco, basta ir até uma agência da CAIXA com seu RG, CPF, comprovantes de renda e de residência e solicitar o seu cartão de crédito para aproveitar as vantagens do Vida Class! Para mais informações sobre os cartões CAIXA, clique aqui.
+		        </div>
+		    </div>
+
+		    <div class="activity-item container">
+		        <h5>O que é o Vida Class Farma?</h5>
+
+		        <div class="activity-item-detail">
+		            O Vida Class Farma é um produto que possibilita aos clientes portadores de cartão de crédito, acesso a mais de 2mil medicamento com descontos de até 60% em mais de 19mil farmácias em todo Brasil.
+		        </div>
+		    </div>
+
+		    <div class="activity-item container">
+		        <h5>O que é o Vida Class Orienta?</h5>
+
+		        <div class="activity-item-detail">
+		            O Vida Class Orienta é um serviço de orientação telefônica sobre saúde. Todos os clientes que aderirem ao Vida Class Farma poderão utilizá-lo. A orientação é realizada para as áreas Médicas, Farmacêuticas, Nutricionais e Psicológicas.
+		        </div>
+		    </div>
+
+		    <div class="activity-item container">
+		        <h5>Quem tem o direito de aderir o Vida Class Farma?</h5>
+
+		        <div class="activity-item-detail">
+		            Todos os clientes que possuam cartão de crédito e seus dependentes. É obrigatória que a compra seja feita pelo titular do cartão, porém, ele pode fazer em nome de outra pessoa.
+		        </div>
+		    </div>
+
+		    <div class="activity-item container">
+		        <h5>Como funcionará a operação?</h5>
+
+		        <div class="activity-item-detail">
+		            O portador do cartão de crédito deve realizar a adesão ao Vida Class Farma pelo site (ww.vidaclass.com.br) ou pela central telefônica (<a href="tel: 011 2627 5200">011 2627 5200</a>). Após 48horas da adesão ao contrato (12 parcelas de R$ 7.99) o cliente poderá se dirigir a qualquer farmácia da rede cadastradas e adquirir seus medicamentos com até 60% de desconto.
+		        </div>
+		    </div>
+
+		    <div class="activity-item container">
+		        <h5>Quem são os dependentes que posso inserir em meu cadastro e quanto vou pagar para cada um? Existe um limite para o número de dependentes?</h5>
+
+		        <div class="activity-item-detail">
+		            Os dependentes que podem ser inseridos no cadastro do titular são os dependentes primários (filhos(as), pais e cônjuge). Não existe limite para o número de dependentes cadastrados. Importante lembrar que para cada dependente adicionado à conta do titular será cobrado mais um contrato anual de 12 parcelas de R$ 3.99 (valor com 50% de desconto).
+		        </div>
+		    </div>
+
+		    <div class="activity-item container">
+		        <h5>Em quais farmácias poderei utilizar os serviços de desconto?</h5>
+
+		        <div class="activity-item-detail">
+		            A lista completa com as mais de 19mil farmácias e os endereços está disponível no site www.vidaclass.com.br, ou por meio do telefone
+		            <a href="tel: 011 2627 5200">
+		            011 2627 5200</a>.
+		        </div>
+		    </div>
+
+		    <div class="activity-item container">
+		        <h5>É possível cancelar a compra do produto?</h5>
+
+		        <div class="activity-item-detail">
+		            O contrato do Vida Class Farma tem duração de 12 meses, podendo ser cancelado após o término das 12 parcelas.
+		        </div>
+		    </div>
+
+		    <div class="activity-item container">
+		        <h5>Existe um limite de compra?</h5>
+
+		        <div class="activity-item-detail">
+		            Não, existe um limite para compra de medicamentos com desconto nas farmácias participantes.
+		        </div>
+		    </div>
+
+		    <div class="activity-item container">
+		        <h5>Meu cartão de crédito não está passando. O que devo fazer?</h5>
+
+		        <div class="activity-item-detail">
+		            Verifique o limite do seu cartão de crédito e entre em contato com a central.
+		        </div>
+		    </div>
+
+		</div><!-- .questions -->
+	</div><!-- .container -->
 </div>
 <!-- End : duvidas -->
 
+<!-- Begin : Login -->
+<div class="login switcher">
+	<div class="container">
+
+		<h1>Entrar</h1>
+
+		<div class="login-content">
+
+			<p class="label-face">
+				Entrar com o facebook: &nbsp;
+			</p>
+
+			<div
+				id="facebookLogin"
+				class="fb-login-button end fb_iframe_widget"
+				onlogin="checkLoginState();"
+				data-max-rows="1"
+				data-size="large"
+				data-show-faces="false"
+				data-auto-logout-link="false"
+				login_text=""
+				fb-xfbml-state="rendered"
+				fb-iframe-plugin-query="app_id=905478576202374&amp;auto_logout_link=false&amp;container_width=0&amp;locale=pt_BR&amp;max_rows=1&amp;sdk=joey&amp;show_faces=false&amp;size=large">
+
+				<span style="vertical-align: bottom; width: 74px; height: 25px;">
+					<iframe
+						name="f34b22bad20d654"
+						width="1000px"
+						height="1000px"
+						frameborder="0"
+						allowtransparency="true"
+						allowfullscreen="true"
+						scrolling="no"
+						title="fb:login_button Facebook Social Plugin"
+						src="https://www.facebook.com/v2.5/plugins/login_button.php?app_id=905478576202374&amp;auto_logout_link=false&amp;channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FlUqP5iIjiw6.js%3Fversion%3D42%23cb%3Df2a422700414a3%26domain%3Dwww.vidaclass.com.br%26origin%3Dhttp%253A%252F%252Fwww.vidaclass.com.br%252Ff26ac5636784094%26relation%3Dparent.parent&amp;container_width=0&amp;locale=pt_BR&amp;max_rows=1&amp;sdk=joey&amp;show_faces=false&amp;size=large"
+						style="border: none; visibility: visible; width: 74px; height: 25px;"
+						class="">
+					</iframe>
+				</span>
+			</div>
+
+			<p class="separator"><span>ou</span></p>
+
+			<form
+				name="frmEntrar"
+				action="https://www.vidaclass.com.br/login"
+				id="frmEntrar"
+				method="POST"
+				novalidate="novalidate">
+
+	            <div class="input-login">
+	                <label for="login">Email ou CPF</label>
+	                <input name="login" id="UserLogin" type="text">
+	            </div>
+
+	            <div class="input-login">
+	                <label for="password">Senha</label>
+	                <input name="password" id="UserPassword" type="password">
+	            </div>
+
+	            <input name="btn-login" id="btn-login" type="submit" value="ENTRAR" class="btnv2 btnv2-small btnv2-default">
+	        </form>
+
+		</div><!-- .login-content -->
+
+
+	</div><!-- .container -->
+</div>
+<!-- End : Login -->
 <!-- src/content/after.html -->
 
 </div>

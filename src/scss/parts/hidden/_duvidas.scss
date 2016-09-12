@@ -1,6 +1,46 @@
-/* src/scss/parts/hidden/_duvidas.scss */
-
 .duvidas
 {
 	@extend .hidden-content;
+	padding-bottom: 50px;
+
+	p
+	{
+		color: $color-gray;
+		margin-bottom: 30px;
+	}
+
+	.questions
+	{
+		.activity-item-detail
+		{
+			display: none;
+			padding-bottom: 20px;
+		}
+
+		h5
+		{
+			display: inline-block;
+			font-weight: 800;
+			margin: 5px 0 10px;
+			transition: all 0.5s;
+			color: $color-blue;
+			cursor: pointer;
+		}
+
+		.activity-item-detail
+		{
+			color: $color-gray;
+		}
+
+		.activity-item.active
+		{
+			h5
+			{
+				color: #000;
+			}
+
+
+		}
+	}
 }
+
