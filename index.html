@@ -7,7 +7,7 @@
 	<title>Vida Class</title>
 
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="./css/index.css">
 </head>
 <body>
 
@@ -18,18 +18,18 @@
 <div id="header">
 	<div class="container">
 
-		<a href="http://vidaclass.com.br/" class="logo"></a>
+		<a href="/" class="logo"></a>
 
 		<div class="menu">
 			<ul>
 				<li><a href="http://vidaclass.com.br/saude">saude</a></li>
 				<li><a href="http://vidaclass.com.br/farma">farma</a></li>
-				<li><a href="#sobre">sobre</a></li>
-				<li><a href="#contato">contato</a></li>
-				<li><a href="#duvidas">dúvidas</a></li>
+				<li><a href="/#sobre">sobre</a></li>
+				<li><a href="/#contato">contato</a></li>
+				<li><a href="/#duvidas">dúvidas</a></li>
 			</ul>
 			<button onclick="window.location.href='http://vidaclass.com.br/prestadores'">prestador</button>
-			<button class="gray" onclick="window.location.hash='#login';">entrar</button>
+			<button class="gray" onclick="window.location.hash='/#login';">entrar</button>
 		</div>
 
 	</div>
@@ -114,7 +114,38 @@
 	<div class="banner">
 		<div class="container">
 			<div class="slider">
-				<img src="./img/footer_banner.jpg" alt="caixa">
+				<ul class="tslider">
+					<li>
+						<a
+							href="http://www.caixa.gov.br/voce/cartoes/credito/Paginas/default.aspx">
+							<img src="./img/banners/banner_05.jpg" alt="caixa">
+						</a>
+					</li>
+					<li>
+						<a
+							href="https://www.vidaclass.com.br/parceiros/pontosmultiplus">
+							<img src="./img/banners/banner_01.jpg">
+						</a>
+					</li>
+					<li>
+						<a
+							href="http://vidaclass.com.br/farma">
+							<img src="./img/banners/banner_02.jpg">
+						</a>
+					</li>
+					<li>
+						<a
+							href="http://vidaclass.com.br/saude">
+							<img src="./img/banners/banner_03.jpg">
+						</a>
+					</li>
+					<li>
+						<a
+							href="http://vidaclass.com.br/farma">
+							<img src="./img/banners/banner_04.jpg">
+						</a>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</div>
@@ -175,34 +206,36 @@
 		</p>
 
 		<form
-			method="post"
-			accept-charset="utf-8"
-			id="contact"
-			action="https://m.vidaclass.com.br/contato"
+			name="frmContact"
+			id="frmContact"
+			method="POST"
+			action="/fale-conosco"
 			novalidate="novalidate">
 
-			<input type="hidden" name="_method" value="POST">
-
 			<div class="input-field">
-				<input type="text" name="name" placeholder="Nome">
+				<input type="text" name="contactName" placeholder="Nome">
 			</div>
 
 			<div class="input-field">
-				<input type="email" name="mail" placeholder="E-mail">
+				<input type="email" name="contactEmail" placeholder="E-mail">
 			</div>
 
 			<div class="input-field">
-				<input type="tel" name="phone" placeholder="Telefone">
+				<input type="tel" name="contactPhone" placeholder="Telefone">
 			</div>
+
+			<input type="hidden" name="contactProduct" value="x">
+			<input type="hidden" name="contactSubject" value="x">
 
 			<div class="input-field">
 				<h3>Mensagem</h3>
-				<textarea name="message" maxlength="250" placeholder="Mensagem"></textarea>
+				<textarea name="contactMessage" maxlength="250" placeholder="Mensagem"></textarea>
 			</div>
 
 			<button type="submit">ENVIAR</button>
 
 		</form>
+
 	</div>
 	<!-- End : form -->
 
@@ -518,10 +551,10 @@
 
 			<div class="menu">
 				<ul>
-					<li>Sobre</li>
-					<li>Dúvidas</li>
+					<li><a href="/#sobre">Sobre</a></li>
+					<li><a href="/#duvidas">Dúvidas</a></li>
 					<li>
-						Contato
+						<a href="/#contato">Contato</a>
 
 						<div class="telephones">
 							0800 202 5277<br>

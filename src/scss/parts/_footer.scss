@@ -117,13 +117,19 @@
 			float: left;
 			margin-right: 35px;
 			position: relative;
-			color: $color-blue;
-			font-size: 1.3em;
+
+			a
+			{
+				color: $color-blue;
+				font-size: 1.3em;
+				text-decoration: none;
+			}
 
 			.telephones
 			{
+				color: $color-blue;
 				margin-top: 15px;
-				font-size: 0.85em;
+				font-size: 0.9em;
 			}
 		}
 

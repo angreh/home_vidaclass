@@ -15,33 +15,35 @@
 		</p>
 
 		<form
-			method="post"
-			accept-charset="utf-8"
-			id="contact"
-			action="https://m.vidaclass.com.br/contato"
+			name="frmContact"
+			id="frmContact"
+			method="POST"
+			action="/fale-conosco"
 			novalidate="novalidate">
 
-			<input type="hidden" name="_method" value="POST">
-
 			<div class="input-field">
-				<input type="text" name="name" placeholder="Nome">
+				<input type="text" name="contactName" placeholder="Nome">
 			</div>
 
 			<div class="input-field">
-				<input type="email" name="mail" placeholder="E-mail">
+				<input type="email" name="contactEmail" placeholder="E-mail">
 			</div>
 
 			<div class="input-field">
-				<input type="tel" name="phone" placeholder="Telefone">
+				<input type="tel" name="contactPhone" placeholder="Telefone">
 			</div>
+
+			<input type="hidden" name="contactProduct" value="x">
+			<input type="hidden" name="contactSubject" value="x">
 
 			<div class="input-field">
 				<h3>Mensagem</h3>
-				<textarea name="message" maxlength="250" placeholder="Mensagem"></textarea>
+				<textarea name="contactMessage" maxlength="250" placeholder="Mensagem"></textarea>
 			</div>
 
 			<button type="submit">ENVIAR</button>
 
 		</form>
+
 	</div>
 	<!-- End : form -->

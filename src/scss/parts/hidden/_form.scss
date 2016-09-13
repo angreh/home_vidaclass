@@ -27,25 +27,25 @@
 			border-color: #000;
 		}
 
-		input[name='name']
+		input[name='contactName']
 		{
 			@include single-background('../img/form_account.png');
 			background-position: 10px 6px;
 		}
 
-		input[name='mail']
+		input[name='contactEmail']
 		{
 			@include single-background('../img/form_mail.png');
 			background-position: 10px 6px;
 		}
 
-		input[name='phone']
+		input[name='contactPhone']
 		{
 			@include single-background('../img/form_phone.png');
 			background-position: 10px 6px;
 		}
 
-		textarea[name='message']
+		textarea[name='contactMessage']
 		{
 			@include single-background('../img/form_message.png');
 			background-position: 10px 6px;

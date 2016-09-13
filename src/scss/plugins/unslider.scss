@@ -1,0 +1,22 @@
+/**
+ *   Here's where everything gets included. You don't need
+ *   to change anything here, and doing so might break
+ *   stuff. Here be dragons and all that.
+ */
+@import 'unslider/variables';
+@import 'unslider/reset';
+@import 'unslider/dots';
+
+.unslider
+{
+	li
+	{
+		position: relative;
+
+		img
+		{
+			width: 100%;
+			height: auto;
+		}
+	}
+}

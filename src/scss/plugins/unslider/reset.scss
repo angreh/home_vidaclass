@@ -1,0 +1,81 @@
+.#{$unslider-namespace}, %#{$unslider-namespace} {
+	//  Should either be relative or absolute
+	//  as long as it's not static, but we'll
+	//  set it using jQuery
+	// position: relative;
+	overflow: auto;
+	margin: 0;
+	padding: 0;
+
+	&-wrap {
+		position: relative;
+
+		&.unslider-carousel > li {
+			float: left;
+		}
+	}
+
+	//  Vertical sliders don't float left
+	&-vertical {
+		> ul {
+			height: 100%;
+		}
+
+		li {
+			float: none;
+			width: 100%;
+		}
+	}
+
+	//  Fading needs everything to appear on top of
+	//  each other
+	&-fade {
+		position: relative;
+
+		.unslider-wrap li {
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			z-index: 8;
+
+			&.unslider-active {
+				z-index: 10;
+			}
+		}
+	}
+
+	ul, ol, li {
+		list-style: none;
+
+		/* Reset any weird spacing */
+		margin: 0;
+		padding: 0;
+
+		border: none;
+	}
+
+	&-arrow {
+		top: 43%;
+		position: absolute;
+		left: 5px;
+		z-index: 2;
+
+		width: 32px;
+		height: 32px;
+	    background: rgba(0,0,0,.2) no-repeat 50% 50%;
+		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAQCAQAAABuQZ3IAAAAi0lEQVR4AU3OISBEQQBAwS0AACS9NxqQgCZpkiYBVddFvWhAAUABAPQCAGC4g/0vTnrBqCfDIZl70J+kMUBPpEwT4FNXxBxz4F1HxHyr4EVTxBLb4EFNxEon4CJSlVNw9AcV9sC16h8osgke1P1ArgXwouVvdQq86ww/GQefusNf7kBviBlxpT8k+gL/Wox4r1d4MwAAAABJRU5ErkJggg==);
+	    background-size: 7px 11px;
+	    border-radius: 5px;
+		font-size: 0;
+		transform: rotate(-180deg);
+
+		cursor: pointer;
+
+		&.next {
+			left: auto;
+			right: 5px;
+			transform: rotate(0);
+		}
+	}
+}

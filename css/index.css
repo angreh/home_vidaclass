@@ -361,6 +361,74 @@ th {
 * {
   outline: none; }
 
+/* Plugin Slider ( ynslider ) */
+/**
+ *   Here's where everything gets included. You don't need
+ *   to change anything here, and doing so might break
+ *   stuff. Here be dragons and all that.
+ */
+/**
+ *   Default variables
+ *
+ *   While these can be set with JavaScript, it's probably
+ *   better and faster to just set them here, compile to
+ *   CSS and include that instead to use some of that
+ *   hardware-accelerated goodness.
+ */
+.unslider {
+  overflow: auto;
+  margin: 0;
+  padding: 0; }
+  .unslider-wrap {
+    position: relative; }
+    .unslider-wrap.unslider-carousel > li {
+      float: left; }
+  .unslider-vertical > ul {
+    height: 100%; }
+  .unslider-vertical li {
+    float: none;
+    width: 100%; }
+  .unslider-fade {
+    position: relative; }
+    .unslider-fade .unslider-wrap li {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      z-index: 8; }
+      .unslider-fade .unslider-wrap li.unslider-active {
+        z-index: 10; }
+  .unslider ul, .unslider ol, .unslider li {
+    list-style: none;
+    /* Reset any weird spacing */
+    margin: 0;
+    padding: 0;
+    border: none; }
+  .unslider-arrow {
+    top: 43%;
+    position: absolute;
+    left: 5px;
+    z-index: 2;
+    width: 32px;
+    height: 32px;
+    background: rgba(0, 0, 0, 0.2) no-repeat 50% 50%;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAQCAQAAABuQZ3IAAAAi0lEQVR4AU3OISBEQQBAwS0AACS9NxqQgCZpkiYBVddFvWhAAUABAPQCAGC4g/0vTnrBqCfDIZl70J+kMUBPpEwT4FNXxBxz4F1HxHyr4EVTxBLb4EFNxEon4CJSlVNw9AcV9sC16h8osgke1P1ArgXwouVvdQq86ww/GQefusNf7kBviBlxpT8k+gL/Wox4r1d4MwAAAABJRU5ErkJggg==);
+    background-size: 7px 11px;
+    border-radius: 5px;
+    font-size: 0;
+    transform: rotate(-180deg);
+    cursor: pointer; }
+    .unslider-arrow.next {
+      left: auto;
+      right: 5px;
+      transform: rotate(0); }
+
+.unslider li {
+  position: relative; }
+  .unslider li img {
+    width: 100%;
+    height: auto; }
+
 /* General */
 * {
   font-weight: 300;
@@ -379,6 +447,9 @@ th {
   content: "";
   display: table;
   clear: both; }
+
+#content {
+  padding-top: 84px; }
 
 ul {
   padding: 0;
@@ -422,7 +493,13 @@ h3 {
 /* src/scss/parts/_header.scss */
 #header {
   height: 84px;
-  border-bottom: 1px solid #2098c5; }
+  border-bottom: 1px solid #2098c5;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 998;
+  transition: all 0.5s; }
   #header .logo {
     position: absolute;
     top: 25px;
@@ -589,16 +666,16 @@ h3 {
   .contato .form input:hover, .contato .form textarea:hover,
   .contato .form input:focus, .contato .form textarea:focus {
     border-color: #000; }
-  .contato .form input[name='name'] {
+  .contato .form input[name='contactName'] {
     background: url("../img/form_account.png") no-repeat;
     background-position: 10px 6px; }
-  .contato .form input[name='mail'] {
+  .contato .form input[name='contactEmail'] {
     background: url("../img/form_mail.png") no-repeat;
     background-position: 10px 6px; }
-  .contato .form input[name='phone'] {
+  .contato .form input[name='contactPhone'] {
     background: url("../img/form_phone.png") no-repeat;
     background-position: 10px 6px; }
-  .contato .form textarea[name='message'] {
+  .contato .form textarea[name='contactMessage'] {
     background: url("../img/form_message.png") no-repeat;
     background-position: 10px 6px; }
   .contato .form button {
@@ -770,12 +847,15 @@ h3 {
     #footer .wrapper-menu li {
       float: left;
       margin-right: 35px;
-      position: relative;
-      color: #2098c5;
-      font-size: 1.3em; }
+      position: relative; }
+      #footer .wrapper-menu li a {
+        color: #2098c5;
+        font-size: 1.3em;
+        text-decoration: none; }
       #footer .wrapper-menu li .telephones {
+        color: #2098c5;
         margin-top: 15px;
-        font-size: 0.85em; }
+        font-size: 0.9em; }
     #footer .wrapper-menu li:last-child {
       margin-right: 0; }
     #footer .wrapper-menu li:after {
